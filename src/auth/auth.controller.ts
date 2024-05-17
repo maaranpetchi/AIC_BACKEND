@@ -11,7 +11,6 @@ export class AuthController {
     handleLogin() {
         return { msg: 'Google Authentication login' }
     }
-
     @Get('google/callback')
     @UseGuards(AuthGuard('google'))
     handleRedirect(@Req() req){
